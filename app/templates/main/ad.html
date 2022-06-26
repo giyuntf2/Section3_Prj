@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        img {
+            display : block;
+            margin : auto;
+            max-width:50%; 
+            height:auto;
+            }
+
+        .main_box{
+            display : block;
+            margin : auto;
+            margin-top:50px; 
+            background-color: #ffffff; 
+            width: 310px; 
+            height: auto;
+            border: 3px solid black;
+        }
+
+        </style>
+    </head>
+    <body style="background-color:#5383E8">
+            <div class="container">
+                <a target="_blank" href="#">
+                    <img class="main" src="{{ url_for('static', filename='image/jinx.png') }}">
+                </a>
+            <div class="main_box">
+                <fieldset style = "width: 350; background:white;">
+                <div class="print">
+                    <font size="7">
+                        오늘의 라인은 {{y_pred[0]}}가 좋을것 같아요. 
+                    </font>
+                </div>
+    </body>
+</html>
+
+
+
+

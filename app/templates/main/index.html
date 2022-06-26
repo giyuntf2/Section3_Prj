@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        img {
+            display : block;
+            margin : auto;
+            max-width:75%; 
+            height:auto;
+            }
+
+        .main_box{
+            display : block;
+            margin : auto;
+            margin-top:50px; 
+            background-color: #ffffff; 
+            width: 500px; 
+            height: 260px;
+            border: 3px solid black;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-color:#5383E8">
+    <div class="container">
+        <a target="_blank" href="#">
+            <img class="main" src="{{ url_for('static', filename='image/op_gg.png') }}">
+        </a>
+    </div>
+    <div class="main_box">
+        <h2 class="normal">
+            최근에 한 게임으로 오늘의 포지션을 찾아보세요.
+        </h2>
+        <div class="params_box">
+            <form action="/POST" method="GET">
+                <fieldset style = "width: 350; background:white;">
+                    <legend>
+                        아래 박스에 숫자를 채워 넣어보세요.
+                    </legend>
+                <label for = 'minions'></label>
+                <input type="text" name="minions" value placeholder="minion 처치수 입력...">
+                <label for = 'gold'></label>
+                <input type="text" name="gold" value placeholder="gold 획득 입력...">
+                <label for = 'ward'></label>
+                <input type="text" name="ward" value placeholder="ward 설치 갯수 입력...">
+                <label for = 'damage'></label>
+                <input type="text" name="damage" value placeholder="누적 damage 입력...">
+                <label for = 'kill'></label>
+                <input type="text" name="kill" value placeholder="kill 수 입력...">
+                <label for = 'death'></label>
+                <input type="text" name="death" value placeholder="death 수 입력...">
+                <label for = 'assist'></label>
+                <input type="text" name="assist" value placeholder="assist 수 입력...">
+                <br>
+                <br>
+                <button type="submit">
+                    라인찾기
+                </button>
+                <button>
+                    <a href="/dashboard"> 분석 보러가기 </a>
+                </button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+<h6 style='text-align:center'>
+    단, 성능은 보장 못합니다...
+</h6>
+</body>
+</html>
+
+</body>
+</html>
